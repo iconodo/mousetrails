@@ -14,7 +14,7 @@ Joystick mouse trails in Cerebral Palsy User
 [dasher: a keyboardless text entry software](https://github.com/dasher-project/dasher/releases)
     
      
-## II.- `... of heaven and earth`
+## II.- `Report everything in RPubs?`
 
 II.1. `Heaven... I'm in heaven` - beyond "severe sight damaging"... and the `actual "cars not so sexy anymore" cause they all look like the "toys" depicted in` [Short History of RMI HyperCars](http://www.autoblog.com/2007/01/05/a-short-history-of-the-rmi-hypercar-ultralight-vehicle-concept/)
 
@@ -42,6 +42,6 @@ of holistic design methods in automotive design,
 manufacture and operation](http://www.witpress.com/Secure/elibrary/papers/9781853128530/9781853128530013FU1.pdf)
 
 ### Yes!!... this is Heaven!!
-We only have to adapt the 'total design' approach of RMI's hypercar, describe/outline our solutions, convince the Academia/Enterprises and sooner or later we'll be seeing one after the other the very best cost/efective `similar` solutions parading down our town streets :) 
+We only have to adapt the 'total design' approach of RMI's hypercar, describe/outline our solutions, convince the Academia/Enterprises and sooner or later we'll be seeing one after the other the very best cost/efective `similar` solutions parading down our town streets :) ... or our assistive text entry technologies. 
 
  
