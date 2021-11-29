@@ -25,6 +25,6 @@ Joystick mouse trails in Cerebral Palsy User
 [trails.ck](https://github.com/iconodo/mousetrails/blob/master/trails.ck).  And...
 
    * `RStudio script -- ` 
-[realTrails.R](https://github.com/iconodo/mousetrails/blob/master/trails.ck). 
+[realTrails.R](https://github.com/iconodo/mousetrails/blob/master/realTrails.R). 
     
 
