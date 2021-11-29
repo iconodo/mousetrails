@@ -3,7 +3,7 @@ Joystick mouse trails in Cerebral Palsy User
 
 ### Stairs towards:
 
-## I.- `Inferencing a spasms dictionary from`
+## `Inferencing a spasms dictionary from`
 
    * `Folder chuckedData text files ` 
 [in this repository](https://github.com/iconodo/mousetrails/blob/master/chuckedData)
@@ -14,9 +14,8 @@ Joystick mouse trails in Cerebral Palsy User
 [dasher: a keyboardless text entry software](https://github.com/dasher-project/dasher/releases)
     
      
-## II.- `Report everything in RPubs?`
+## I.- `Generating and exploring the data`
 
-II.1. `Heaven... I'm in heaven` - beyond "severe sight damaging"... and the `actual "cars not so sexy anymore" cause they all look like the "toys" depicted in` [Short History of RMI HyperCars](http://www.autoblog.com/2007/01/05/a-short-history-of-the-rmi-hypercar-ultralight-vehicle-concept/)
 
     * RMI's credo's fragment in FAQ: 
     
