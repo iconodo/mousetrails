@@ -39,8 +39,6 @@ Note. In the above mentioned YouTube video, under the info (show more) section, 
 ## III.- `The wishlist...`
 
 
-   * `... coding/pseudocoding a spasms dictionary -- ` xxxxxxx
-
-   * `... coding it into Dasher's sources -- ` xxxxxxx
-    
-
+   * `... coding/pseudocoding a spasms dictionary -- ` Dasher includes text files in many many languages that train the software each time you change from one language to another one; thus, changing the actual dictionary used in the prediction of words/phrases; and, incrementally, builds a user's repetition of phrases based dictionary.
+      
+   * `... coding it into Dasher's sources training engines -- ` Being able to include in the Dasher engines a similar dictionary of "mouse forbidden movements" and getting around them would be the jewel of this up to this day far crown. 
