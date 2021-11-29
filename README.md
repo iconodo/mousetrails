@@ -26,5 +26,21 @@ Joystick mouse trails in Cerebral Palsy User
 
    * `RStudio script -- ` 
 [realTrails.R](https://github.com/iconodo/mousetrails/blob/master/realTrails.R). 
+
+Note. In the above mentioned YouTube video, under the info (show more) section, there is a Google drive link loaded with redundant instructions on how to install and run the tools to generate and explore the mouse trails files.
+
+
+## II.- `Explaining the need...`
+
+
+   * `... coping with spasticity while using Dasher -- ` with a kind of filter able to distinguishing and undoing the excesive "faulty" movements would help the efficiency of the input of text and perhaps would better the neuromuscular relaxation as well, that would also result in the whole text capturing performance.
+   
+
+## III.- `The wishlist...`
+
+
+   * `... coding/pseudocoding a spasms dictionary -- ` xxxxxxx
+
+   * `... coding it into Dasher's sources -- ` xxxxxxx
     
 
