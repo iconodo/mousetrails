@@ -8,7 +8,7 @@ Joystick mouse trails in Cerebral Palsy User
    * `... shown from min 3:40+ ` 
 [in this video](https://www.youtube.com/watch?v=A7NFJpr7pNQ). The use of...
 
-	** `Yet another level?`
+	** `Yet another level?....`
 
    * `Chuck digital music software script -- ` 
 [trails.ck](https://github.com/iconodo/mousetrails/blob/master/trails.ck).  And...
