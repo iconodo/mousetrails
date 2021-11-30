@@ -20,6 +20,6 @@ Joystick mouse trails in Cerebral Palsy User
 ## III.- `SELECTED DATA FILES observations`
 
 
-   * `out2221nnn.txt -- o` When..Dasher includes text files in many many languages that train the software each.
+   * `out2221nnn.txt -- o` When..
          
    * `out2221nnn.txt MAP & TRAILS` 
