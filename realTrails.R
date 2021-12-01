@@ -32,99 +32,99 @@ set.seed(42)
 ## are not exactly the same, the clicks on the buttons might have
 ## been repeated, out of sync, or off the buttons. Traces, anyhow,
 ## may be valid, even if some clicks (syllables) are missing.
-qplot(X, -Y, data = ratonera, main = "Even file # (AND 1 click per button) == constant map", color = SYLLABLE)
-qplot(cX, cY, data = ratonera, main = "Trails from mouse position to next button click", color = SYLLABLE)
+qplot(XofButton, -YofButton, data = ratonera, main = "Even file # (AND 1 click per button) == constant map", color = SYLLABLE)
+qplot(XofTrace, YofTrace, data = ratonera, main = "Trails from mouse position to next button click", color = SYLLABLE)
 
-qplot(dX, data = ratonera, color = SYLLABLE, geom = "density")
-qplot(-dY, data = ratonera, color = SYLLABLE, geom = "density")
+qplot(deltaX, data = ratonera, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = ratonera, color = SYLLABLE, geom = "density")
 
 ## next code sections are optional exploratory commands for whole text file or SYLLABLE trail subsets  
 
 fray1 <- filter(ratonera, SYLLABLE == "FRAY 1")
-qplot(cX, cY, data = fray1, color = "FRAY 1" ,geom = "point" )
-qplot(cX, cY, data = fray1, color = "FRAY 1" ,geom = c("point", "smooth") )
-qplot(dX, data = fray1, color = SYLLABLE, geom = "density")
-qplot(-dY, data = fray1, color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = fray1, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = fray1, color = SYLLABLE, geom = "line")
+qplot(XofTrace, YofTrace, data = fray1, color = "FRAY 1" ,geom = "point" )
+qplot(XofTrace, YofTrace, data = fray1, color = "FRAY 1" ,geom = c("point", "smooth") )
+qplot(deltaX, data = fray1, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = fray1, color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = fray1, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = fray1, color = SYLLABLE, geom = "line")
 
-qplot(dX, -dY, data = fray1, color = SYLLABLE, geom = c("point", "smooth")) 
+qplot(deltaX, -deltaY, data = fray1, color = SYLLABLE, geom = c("point", "smooth")) 
 + `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 
 san2 <- filter(ratonera, SYLLABLE == "SAN- 2")
-qplot(dX, data = san2, color = SYLLABLE, geom = "density")
-qplot(-dY, data = san2, color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = san2, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = san2, color = SYLLABLE, geom = "line")
+qplot(deltaX, data = san2, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = san2, color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = san2, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = san2, color = SYLLABLE, geom = "line")
 
-qplot(dX, -dY, data = san2, color = SYLLABLE, geom = c("point", "smooth")) 
+qplot(deltaX, -deltaY, data = san2, color = SYLLABLE, geom = c("point", "smooth")) 
 + `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 
 tia3 <- filter(ratonera, SYLLABLE == "-TIA- 3")
-qplot(dX, data = tia3, color = SYLLABLE, geom = "density")
-qplot(-dY, data = tia3, color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = tia3, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = tia3, color = SYLLABLE, geom = "line")
+qplot(deltaX, data = tia3, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = tia3, color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = tia3, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = tia3, color = SYLLABLE, geom = "line")
 
-qplot(dX, -dY, data = tia3, color = SYLLABLE, geom = c("point", "smooth")) 
+qplot(deltaX, -deltaY, data = tia3, color = SYLLABLE, geom = c("point", "smooth")) 
 + `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 
 go4 <- filter(ratonera, SYLLABLE == "GO 4")
-qplot(dX, data = go4, color = SYLLABLE, geom = "density")
-qplot(-dY, data = go4, color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = go4, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = go4, color = SYLLABLE, geom = "line")
+qplot(deltaX, data = go4, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = go4, color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = go4, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = go4, color = SYLLABLE, geom = "line")
 
-qplot(dX, -dY, data = go4, color = SYLLABLE, geom = c("point", "smooth")) 
+qplot(deltaX, -deltaY, data = go4, color = SYLLABLE, geom = c("point", "smooth")) 
 + `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
 
 fray5 <- filter(ratonera, SYLLABLE == "FRAY 5")
-qplot(dX, data = fray5, color = SYLLABLE, geom = "density")
-qplot(-dY, data = fray5, color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = fray5, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = fray5, color = SYLLABLE, geom = "line")
+qplot(deltaX, data = fray5, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = fray5, color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = fray5, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = fray5, color = SYLLABLE, geom = "line")
 
 san6 <- filter(ratonera, SYLLABLE == "SAN- 6")
-qplot(dX, data = san6, color = SYLLABLE, geom = "density")
-qplot(-dY, data = san6, color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = san6, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = san6, color = SYLLABLE, geom = "line")
+qplot(deltaX, data = san6, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = san6, color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = san6, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = san6, color = SYLLABLE, geom = "line")
 
 tia7 <- filter(ratonera, SYLLABLE == "-TIA- 7")
-qplot(dX, data = tia7, color = SYLLABLE, geom = "density")
-qplot(-dY, data = tia7, color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = tia7, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = tia7, color = SYLLABLE, geom = "line")
+qplot(deltaX, data = tia7, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = tia7, color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = tia7, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = tia7, color = SYLLABLE, geom = "line")
 
 go8 <- filter(ratonera, SYLLABLE == "GO 8")
-qplot(dX, data = go8, color = SYLLABLE, geom = "density")
-qplot(-dY, data = go8 , color = SYLLABLE, geom = "density")
-qplot(WHEN * 1000, dX, data = go8, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = go8, color = SYLLABLE, geom = "line")
+qplot(deltaX, data = go8, color = SYLLABLE, geom = "density")
+qplot(-deltaY, data = go8 , color = SYLLABLE, geom = "density")
+qplot(WHEN * 1000, deltaX, data = go8, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = go8, color = SYLLABLE, geom = "line")
 
-#qplot(dX, data = ratonera, color = "SYLLABLE", geom = "density" )
-#qplot(-dY, data = ratonera, color = "SYLLABLE", geom = "density" )
+#qplot(deltaX, data = ratonera, color = "SYLLABLE", geom = "density" )
+#qplot(-deltaY, data = ratonera, color = "SYLLABLE", geom = "density" )
 
-#qplot(dX, WHEN, data = ratonera, color = SYLLABLE)
-#qplot(-dY, WHEN, data = ratonera, color = SYLLABLE)
+#qplot(deltaX, WHEN, data = ratonera, color = SYLLABLE)
+#qplot(-deltaY, WHEN, data = ratonera, color = SYLLABLE)
 
-qplot(WHEN * 1000, dX, data = ratonera, color = SYLLABLE, geom="line")
-qplot(WHEN * 1000, -dY, data = ratonera, color = SYLLABLE, geom = "line")
+qplot(WHEN * 1000, deltaX, data = ratonera, color = SYLLABLE, geom="line")
+qplot(WHEN * 1000, -deltaY, data = ratonera, color = SYLLABLE, geom = "line")
 
-qplot(WHEN * 1000, dX, data = ratonera, color = "SYLLABLE", geom = "line")
-qplot(WHEN * 1000, -dY, data = ratonera, color = "SYLLABLE", geom = "line")
+qplot(WHEN * 1000, deltaX, data = ratonera, color = "SYLLABLE", geom = "line")
+qplot(WHEN * 1000, -deltaY, data = ratonera, color = "SYLLABLE", geom = "line")
 
 
-qplot(dX, -dY, data = ratonera, color = SYLLABLE, geom = c("point", "smooth")) 
+qplot(deltaX, -deltaY, data = ratonera, color = SYLLABLE, geom = c("point", "smooth")) 
 + `geom_smooth()` using method = 'loess' and formula 'y ~ x'
- qplot(dX, -dY, data = ratonera, color = SYLLABLE, geom = c("line", "smooth"))
+ qplot(deltaX, -deltaY, data = ratonera, color = SYLLABLE, geom = c("line", "smooth"))
 + `geom_smooth()` using method = 'loess' and formula '-y ~ x'
 
- qplot(dX, -dY, data = fray1, color = SYLLABLE, geom = c("line", "smooth"))
+ qplot(deltaX, -deltaY, data = fray1, color = SYLLABLE, geom = c("line", "smooth"))
  + `geom_smooth()` using method = 'loess' and formula '-y ~ x'
  
  
@@ -134,16 +134,16 @@ summary(ratonera)
 abrat <- read.table("out222.txt", header = TRUE, sep = ",")
 head(abrat)
 
-abrat$dXabs = abs(ratonera$dX)
+abrat$deltaXabs = abs(ratonera$deltaX)
 tail(abrat)
 
-abrat$dYabs = abs(ratonera$dY)
+abrat$deltaYabs = abs(ratonera$deltaY)
 tail(abrat)
 
-abratAbsx <- sum(abrat$dXabs)
+abratAbsx <- sum(abrat$deltaXabs)
 abratAbsx 
 
-abratAbsy <- sum(abrat$dYabs)
+abratAbsy <- sum(abrat$deltaYabs)
 abratAbsy 
 
 manhatan <- abratAbsx + abratAbsy
