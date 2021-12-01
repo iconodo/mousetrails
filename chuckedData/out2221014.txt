@@ -1,4 +1,4 @@
-dX,dY,WHEN,SYLLABLE,X,Y,cX,cY
+deltaX,deltaY,WHEN,SYLLABLE,XofButton,YofButton,XofTrace,YofTrace
 0,1,0.0746173,Yield,0,0,0,-1
 0,1,0.0746522,Yield,0,0,0,-2
 0,2,0.074687,Yield,0,0,0,-4
