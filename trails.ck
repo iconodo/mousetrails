@@ -350,8 +350,9 @@ if( !fout.good() )
 // starting time
 <<< "First now (at second):", now / second >>>;
 // file header
-fout  <= "dX," <= "dY," <= "WHEN," <= "SYLLABLE," <= "X,"<= "Y,"
-      <= "cX,"<= "cY"<=IO.newline();
+fout  <= "deltaX," <= "deltaY," <= "WHEN," <= "SYLLABLE," 
+      <= "XofButton," <= "YofButton," <= "XofTrace,"<= "YofTrace"
+      <=IO.newline();
 
 // infinite time loop
 while( true )
