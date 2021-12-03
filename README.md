@@ -43,6 +43,6 @@ Warning. While most of scripting features in ChucK's MiniAudicle and R scripts f
 ## III.- `The wishlist...`
 
 
-   * `... coding/pseudocoding a spasms dictionary -- ` Dasher includes text files in almost all languages ([here the xml templates](https://github.com/iconodo/dasher/tree/master/Data/alphabets)) on Earth that train the software each time you choose another one; thus, changing the actual dictionary used in the prediction of words/phrases. And, incrementally, builds on the user's wording preferences in a similar fashion to the mobiles keyboards suggestions.
+   * `... coding/pseudocoding a spasms dictionary -- ` Dasher includes text files in almost all languages ([here the xml templates](https://github.com/iconodo/dasher/tree/master/Data/alphabets) and [the downloadable Spanish training text](https://github.com/iconodo/dasher/blob/master/Data/training/training_spanishC_ES.txt)) on Earth that train the software each time you choose another one; thus, changing the actual dictionary used in the prediction of words/phrases. And, incrementally, builds on the user's wording preferences in a similar fashion to the mobiles keyboards suggestions.
       
    * `... coding it into Dasher's sources training engines -- ` Being able to include into the Dasher engines a similar-to-languages dictionary of "mouse forbidden movements" AND GETTING AROUND THEM would be the jewel of this up to this day far crown. 
