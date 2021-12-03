@@ -3,7 +3,7 @@ Joystick mouse trails in Cerebral Palsy User
 
 ### Stairs towards:
 
-## `Inferencing a spasms dictionary from...`
+## `Inferencing of a spasms dictionary from...`
 
    * `Folder chuckedData text files -- ` 
 [in this repository](https://github.com/iconodo/mousetrails/blob/master/chuckedData)
