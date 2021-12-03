@@ -20,7 +20,7 @@ setwd("/Users/gerardogarciacabrero/Desktop/DasherSpasms")
 
 ## uncomment and change as required. "out222xxxx.txt" change xxxx with 1000,1001...1nnn
 ## for example...
-ratonera <- read.table("out2221028.txt", header = TRUE, sep = ",") 
+ratonera <- read.table("out2221041.txt", header = TRUE, sep = ",") 
 
 library(dplyr)
 library(ggplot2)
@@ -41,8 +41,11 @@ qplot(-deltaY, data = ratonera, color = SYLLABLE, geom = "density")
 ## next code sections are optional exploratory commands for whole text file or SYLLABLE trail subsets  
 
 fray1 <- filter(ratonera, SYLLABLE == "FRAY 1")
-qplot(XofTrace, YofTrace, data = fray1, color = "FRAY 1" ,geom = "point" )
-qplot(XofTrace, YofTrace, data = fray1, color = "FRAY 1" ,geom = c("point", "smooth") )
+## plot of segment
+qplot(XofTrace, YofTrace, data = fray1, color = "FRAY 1")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(fray1,1)
+tail(fray1,1)
 qplot(deltaX, data = fray1, color = SYLLABLE, geom = "density")
 qplot(-deltaY, data = fray1, color = SYLLABLE, geom = "density")
 qplot(WHEN * 1000, deltaX, data = fray1, color = SYLLABLE, geom="line")
@@ -53,6 +56,11 @@ qplot(deltaX, -deltaY, data = fray1, color = SYLLABLE, geom = c("point", "smooth
 
 
 san2 <- filter(ratonera, SYLLABLE == "SAN- 2")
+## plot of segment
+qplot(XofTrace, YofTrace, data = san2, color = "SAN- 2")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(san2,1)
+tail(san2,1)
 qplot(deltaX, data = san2, color = SYLLABLE, geom = "density")
 qplot(-deltaY, data = san2, color = SYLLABLE, geom = "density")
 qplot(WHEN * 1000, deltaX, data = san2, color = SYLLABLE, geom="line")
@@ -63,6 +71,11 @@ qplot(deltaX, -deltaY, data = san2, color = SYLLABLE, geom = c("point", "smooth"
 
 
 tia3 <- filter(ratonera, SYLLABLE == "-TIA- 3")
+## plot of segment
+qplot(XofTrace, YofTrace, data = tia3, color = "-TIA- 3")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(tia3,1)
+tail(tia3,1)
 qplot(deltaX, data = tia3, color = SYLLABLE, geom = "density")
 qplot(-deltaY, data = tia3, color = SYLLABLE, geom = "density")
 qplot(WHEN * 1000, deltaX, data = tia3, color = SYLLABLE, geom="line")
@@ -73,8 +86,11 @@ qplot(deltaX, -deltaY, data = tia3, color = SYLLABLE, geom = c("point", "smooth"
 
 
 go4 <- filter(ratonera, SYLLABLE == "GO 4")
-qplot(deltaX, data = go4, color = SYLLABLE, geom = "density")
-qplot(-deltaY, data = go4, color = SYLLABLE, geom = "density")
+## plot of segment
+qplot(XofTrace, YofTrace, data = go4, color = "GO 4")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(go4,1)
+tail(go4,1)
 qplot(WHEN * 1000, deltaX, data = go4, color = SYLLABLE, geom="line")
 qplot(WHEN * 1000, -deltaY, data = go4, color = SYLLABLE, geom = "line")
 
@@ -83,34 +99,52 @@ qplot(deltaX, -deltaY, data = go4, color = SYLLABLE, geom = c("point", "smooth")
 
 
 fray5 <- filter(ratonera, SYLLABLE == "FRAY 5")
+## plot of segment
+qplot(XofTrace, YofTrace, data = fray5, color = "FRAY 5")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(fray5,1)
+tail(fray5,1)
 qplot(deltaX, data = fray5, color = SYLLABLE, geom = "density")
 qplot(-deltaY, data = fray5, color = SYLLABLE, geom = "density")
 qplot(WHEN * 1000, deltaX, data = fray5, color = SYLLABLE, geom="line")
 qplot(WHEN * 1000, -deltaY, data = fray5, color = SYLLABLE, geom = "line")
 
 san6 <- filter(ratonera, SYLLABLE == "SAN- 6")
+## plot of segment
+qplot(XofTrace, YofTrace, data = san6, color = "SAN- 6")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(san6,1)
+tail(san6,1)
 qplot(deltaX, data = san6, color = SYLLABLE, geom = "density")
 qplot(-deltaY, data = san6, color = SYLLABLE, geom = "density")
 qplot(WHEN * 1000, deltaX, data = san6, color = SYLLABLE, geom="line")
 qplot(WHEN * 1000, -deltaY, data = san6, color = SYLLABLE, geom = "line")
 
 tia7 <- filter(ratonera, SYLLABLE == "-TIA- 7")
+## plot of segment
+qplot(XofTrace, YofTrace, data = tia7, color = "-TIA- 7")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(tia7,1)
+tail(tia7,1)
 qplot(deltaX, data = tia7, color = SYLLABLE, geom = "density")
 qplot(-deltaY, data = tia7, color = SYLLABLE, geom = "density")
 qplot(WHEN * 1000, deltaX, data = tia7, color = SYLLABLE, geom="line")
 qplot(WHEN * 1000, -deltaY, data = tia7, color = SYLLABLE, geom = "line")
 
 go8 <- filter(ratonera, SYLLABLE == "GO 8")
+## plot of segment
+qplot(XofTrace, YofTrace, data = go8, color = "GO 8")
+## beggining and ending of trace coordinates (XofTrace, YofTrace)
+head(go8,1)
+tail(go8,1)
 qplot(deltaX, data = go8, color = SYLLABLE, geom = "density")
 qplot(-deltaY, data = go8 , color = SYLLABLE, geom = "density")
 qplot(WHEN * 1000, deltaX, data = go8, color = SYLLABLE, geom="line")
 qplot(WHEN * 1000, -deltaY, data = go8, color = SYLLABLE, geom = "line")
 
-#qplot(deltaX, data = ratonera, color = "SYLLABLE", geom = "density" )
-#qplot(-deltaY, data = ratonera, color = "SYLLABLE", geom = "density" )
 
-#qplot(deltaX, WHEN, data = ratonera, color = SYLLABLE)
-#qplot(-deltaY, WHEN, data = ratonera, color = SYLLABLE)
+qplot(deltaX, WHEN, data = ratonera, color = SYLLABLE)
+qplot(-deltaY, WHEN, data = ratonera, color = SYLLABLE)
 
 qplot(WHEN * 1000, deltaX, data = ratonera, color = SYLLABLE, geom="line")
 qplot(WHEN * 1000, -deltaY, data = ratonera, color = SYLLABLE, geom = "line")
@@ -118,20 +152,9 @@ qplot(WHEN * 1000, -deltaY, data = ratonera, color = SYLLABLE, geom = "line")
 qplot(WHEN * 1000, deltaX, data = ratonera, color = "SYLLABLE", geom = "line")
 qplot(WHEN * 1000, -deltaY, data = ratonera, color = "SYLLABLE", geom = "line")
 
-
-qplot(deltaX, -deltaY, data = ratonera, color = SYLLABLE, geom = c("point", "smooth")) 
-+ `geom_smooth()` using method = 'loess' and formula 'y ~ x'
- qplot(deltaX, -deltaY, data = ratonera, color = SYLLABLE, geom = c("line", "smooth"))
-+ `geom_smooth()` using method = 'loess' and formula '-y ~ x'
-
- qplot(deltaX, -deltaY, data = fray1, color = SYLLABLE, geom = c("line", "smooth"))
- + `geom_smooth()` using method = 'loess' and formula '-y ~ x'
- 
- 
 summary(ratonera)
 
-#ratonera <- read.table("out222.txt", header = TRUE, sep = ",")
-abrat <- read.table("out222.txt", header = TRUE, sep = ",")
+abrat <- ratonera
 head(abrat)
 
 abrat$deltaXabs = abs(ratonera$deltaX)
@@ -148,6 +171,5 @@ abratAbsy
 
 manhatan <- abratAbsx + abratAbsy
 manhatan
-
 
 
