@@ -1,5 +1,5 @@
 // trails.ck
-// a training_prototype
+// mouse movements data writer
 
 // Initialize File I/O
 FileIO fout;
@@ -47,10 +47,10 @@ fio.open( filename, FileIO.READ );
 // ensure it's ok
 if( !fio.good() )
 {
-	cherr <= "can't open file: " <= filename <= " for reading..."
-	<= IO.newline();
-	
-	me.exit();
+    cherr <= "can't open file: " <= filename <= " for reading..."
+    <= IO.newline();
+    
+    me.exit();
 }
 
 // variables to read/write into
@@ -60,9 +60,9 @@ int val, val2, quo;
 // loop until end
 while( fio => val )
 {
-	cherr <= val <= IO.newline();
-	chout <= "el contador es: " <= val <= IO.newline();
-	val + 1 => val2;
+    cherr <= val <= IO.newline();
+    chout <= "el contador es: " <= val <= IO.newline();
+    val + 1 => val2;
 }
 
 
@@ -77,8 +77,8 @@ foutright.open( filename, FileIO.WRITE );
 // test
 if( !foutright.good() )
 {
-	cherr <= "can't open file for writing..." <= IO.newline();
-	me.exit();
+    cherr <= "can't open file for writing..." <= IO.newline();
+    me.exit();
 }
 
 // write some stuff
@@ -90,15 +90,15 @@ chout <= "el contador queda en: " <= val2 <= IO.newline();
 val2 / 2 => quo;
 
 if (quo * 2 ==  val2) {
-	chout <= "es par: " <= val2 <= IO.newline();
-	
-	//				return false;
+    chout <= "es par: " <= val2 <= IO.newline();
+    
+    //				return false;
 } else {
-	1 => nonon;
-	chout <= "es impar: " <= val2 <= IO.newline();
-	
-	//		 		isit = true; 
-	
+    1 => nonon;
+    chout <= "es impar: " <= val2 <= IO.newline();
+    
+    //		 		isit = true; 
+    
 }
 
 // close the thing
@@ -111,10 +111,10 @@ foutright.close();
 // random seed if nonon is 2 == even
 //for buttons x,y coordinates always the same
 if (nonon == 2) {
-	Math.srandom(90); 
+    Math.srandom(90); 
 }
 
-// data for Frère Jacques tones
+// data for Frere Jacques tones
 [30,41,43,45,46,48,50,51,53,60,63] @=> int scale[]; 
 
 // parameters setup
@@ -155,7 +155,7 @@ control_view.addElement( pace_note_slider );
 training_latch.pushType();
 training_latch.size( on_button.width(), on_button.height() );
 training_latch.position( (pace_note_slider.x() + pace_note_slider.width() 
-                         + on_button.width()), on_button.y() );
++ on_button.width()), on_button.y() );
 training_latch.name( "Song" );
 control_view.addElement( training_latch );
 
@@ -177,61 +177,61 @@ function void controlMouseMotions()
         while( hint.recv( msg ) )
         {
             // mouse motion
-			if( msg.isMouseMotion() )
-			{
-				now / second / 1000 => tiem1;
-			   	if( msg.deltaX )
-			   	{
-			   		msg.deltaX => laX2;
-			   		<<< "mouse motion:", msg.deltaX, "on x-axis" >>>;
-		   		}
-		   		
-		   		if( msg.deltaY )
-		   		{
-		   			now / second / 10000 => tiem2;
-		   			<<< "mouse motion:", msg.deltaY, "on y-axis" >>>;
-		   			if( tiem2 != tiem1) 
-		   			{
-
-		   				cum_x + laX2 => cum_x;
-		   				cum_y - msg.deltaY => cum_y;
-		   				
-		   				fout  <=  laX2 <= "," <= msg.deltaY <= "," 
-		   				<= now / second / 1000 <= "," 
-		   				<= on_button.name() <= "," <= on_button.x() 
-		   				<= "," <= on_button.y() <= ","  <= cum_x 
-		   				<= "," <= cum_y <= IO.newline();
-	   				}
-   				}
-		    } 
-			
-			// mouse button down
-			else if( msg.isButtonDown() )
+            if( msg.isMouseMotion() )
+            {
+                now / second / 1000 => tiem1;
+                if( msg.deltaX )
+                {
+                    msg.deltaX => laX2;
+                    <<< "mouse motion:", msg.deltaX, "on x-axis" >>>;
+                }
+                
+                if( msg.deltaY )
+                {
+                    now / second / 10000 => tiem2;
+                    <<< "mouse motion:", msg.deltaY, "on y-axis" >>>;
+                    if( tiem2 != tiem1) 
+                    {
+                        
+                        cum_x + laX2 => cum_x;
+                        cum_y - msg.deltaY => cum_y;
+                        
+                        fout  <=  laX2 <= "," <= msg.deltaY <= "," 
+                        <= now / second / 1000 <= "," 
+                        <= on_button.name() <= "," <= on_button.x() 
+                        <= "," <= on_button.y() <= ","  <= cum_x 
+                        <= "," <= cum_y <= IO.newline();
+                    }
+                }
+            } 
+            
+            // mouse button down
+            else if( msg.isButtonDown() )
             {
                 <<< "mouse button", msg.which, "down" >>>;
-
+                
             }
             
             // mouse button up
-           else if( msg.isButtonUp() )
-           {
-               <<< "mouse button", msg.which, "up" >>>;
-		   }
+            else if( msg.isButtonUp() )
+            {
+                <<< "mouse button", msg.which, "up" >>>;
+            }
             
-           // mouse wheel motion
-           else if( msg.isWheelMotion() )
-           {
-		   	
-		   	    if( msg.deltaX )
-		   	    {
-		   			<<< "mouse wheel:", msg.deltaX, "on x-axis" >>>;
-	   			}
+            // mouse wheel motion
+            else if( msg.isWheelMotion() )
+            {
                 
-				if( msg.deltaY )
-				{
-					<<< "mouse wheel:", msg.deltaY, "on y-axis" >>>;
-				}
-			}
+                if( msg.deltaX )
+                {
+                    <<< "mouse wheel:", msg.deltaX, "on x-axis" >>>;
+                }
+                
+                if( msg.deltaY )
+                {
+                    <<< "mouse wheel:", msg.deltaY, "on y-axis" >>>;
+                }
+            }
         }
     }
 }
@@ -245,22 +245,22 @@ function void controlNoteOn()
         // wait for the button to be pushed down
         on_button => now;
         <<< "note on", on_button.name() >>>;
-		<<< "X: ", on_button.x() , "Y: ", on_button.y() >>>;
-
-       //"latch" button has been clicked on label "Training"
-       //song notes need to be "clicked"
-       if( training_latch.name( ) == "Song") 
-	   {
-          Math.random2f(0.05,0.5) => bass.pluckPos;
-          1 => bass.noteOn;
-          0.55 :: second => now;
-          1 => bass.noteOff;
-          0.05 :: second => now;
-       }
-
-       // wait for button to be released
-       on_button => now;
-       <<< "note off", "" >>>;
+        <<< "X: ", on_button.x() , "Y: ", on_button.y() >>>;
+        
+        //"latch" button has been clicked on label "Training"
+        //song notes need to be "clicked"
+        if( training_latch.name( ) == "Song") 
+        {
+            Math.random2f(0.05,0.5) => bass.pluckPos;
+            1 => bass.noteOn;
+            0.55 :: second => now;
+            1 => bass.noteOff;
+            0.05 :: second => now;
+        }
+        
+        // wait for button to be released
+        on_button => now;
+        <<< "note off", "" >>>;
     }
 }
 
@@ -282,7 +282,7 @@ function void controlLatch()
         
         training_latch => now;
         <<< "latch off", "" >>>;
- 
+        
     }
 }
 
@@ -316,12 +316,12 @@ fun int hi( TheEvent event )
         event => now;
         // get the data
         <<<e.value>>>;
-		// uncomment next 2 code lines to start mouse 
-		// tracking from their respective button origin 
-		// x,y pair .... and comment next other 2
-		
-//        Math.random2( 0, 500) => x => cum_x;
-//        Math.random2( 100, 600) => y => cum_y;
+        // uncomment next 2 code lines to start mouse 
+        // tracking from their respective button origin 
+        // x,y pair .... and comment next other 2
+        
+        //        Math.random2( 0, 500) => x => cum_x;
+        //        Math.random2( 100, 600) => y => cum_y;
         Math.random2( 0, 400) => x;
         Math.random2( 100, 500) => y;
         on_button.position( x, y);
@@ -343,16 +343,16 @@ fout.open( "out222" + val2 + ".txt", FileIO.WRITE );
 // test
 if( !fout.good() )
 {
-	cherr <= "can't open file for writing..." <= IO.newline();
-	me.exit();
+    cherr <= "can't open file for writing..." <= IO.newline();
+    me.exit();
 }
 
 // starting time
 <<< "First now (at second):", now / second >>>;
 // file header
 fout  <= "deltaX," <= "deltaY," <= "WHEN," <= "SYLLABLE," 
-      <= "XofButton," <= "YofButton," <= "XofTrace,"<= "YofTrace"
-      <=IO.newline();
+<= "XofButton," <= "YofButton," <= "XofTrace,"<= "YofTrace"
+<=IO.newline();
 
 // infinite time loop
 while( true )
@@ -360,7 +360,7 @@ while( true )
     // advance time
     // decrase/increase for "difficulty/easiness"
     pace::second => now;
-
+    
     // set test data
     Math.random2( 0, 1 ) => e.value;
     
@@ -369,8 +369,8 @@ while( true )
     
     // song note matching from scale
     if(alberto == 1 || alberto == 5) {
-      on_button.name( "FRAY " + Std.itoa(alberto));
-      Std.mtof(scale[1]) => bass.freq;
+        on_button.name( "FRAY " + Std.itoa(alberto));
+        Std.mtof(scale[1]) => bass.freq;
     }
     
     if(alberto == 2 || alberto == 6) {
@@ -386,11 +386,11 @@ while( true )
     if(alberto == 4 || alberto == 8) {
         on_button.name( "GO " + Std.itoa(alberto));
         Std.mtof(scale[1]) => bass.freq;
-		
+        
     }
     
     if(alberto == 9 || alberto == 12) {
-        on_button.name( "¿DUER- " + Std.itoa(alberto));
+        on_button.name( "?DUER- " + Std.itoa(alberto));
         Std.mtof(scale[3]) => bass.freq;
     }
     
@@ -400,12 +400,12 @@ while( true )
     }
     
     if(alberto == 11 || alberto == 14) {
-        on_button.name( "TÚ? " + Std.itoa(alberto));
+        on_button.name( "TU? " + Std.itoa(alberto));
         Std.mtof(scale[5]) => bass.freq;
     }
     
     if(alberto == 15 || alberto == 21) {
-        on_button.name( "¡SUE- " + Std.itoa(alberto));
+        on_button.name( "!SUE- " + Std.itoa(alberto));
         Std.mtof(scale[5]) => bass.freq;
     }
     
@@ -433,62 +433,61 @@ while( true )
         on_button.name( "-NAS! " + Std.itoa(alberto));
         Std.mtof(scale[1]) => bass.freq;
     }
-   
+    
     if(alberto == 27 || alberto == 30 ) {
-       on_button.name( "¡DIN! " + Std.itoa(alberto));
-       Std.mtof(scale[2]) => bass.freq;
+        on_button.name( "!DIN! " + Std.itoa(alberto));
+        Std.mtof(scale[2]) => bass.freq;
     }
     
     if(alberto == 28 || alberto == 31 ) {
-       on_button.name( "¡DAN! " + Std.itoa(alberto));
-       Std.mtof(scale[5]-12) => bass.freq;
+        on_button.name( "!DAN! " + Std.itoa(alberto));
+        Std.mtof(scale[5]-12) => bass.freq;
     }
     
     if(alberto == 29 || alberto == 32 ) {
-       on_button.name( "¡DON! " + Std.itoa(alberto));
-       Std.mtof(scale[1]) => bass.freq;
+        on_button.name( "!DON! " + Std.itoa(alberto));
+        Std.mtof(scale[1]) => bass.freq;
     }
- 
+    
     //"latch" button has been clicked on label "song"
     //notes need not to be "clicked"
     if( training_latch.name( ) == "Training") {
-		Math.random2f(0.05,0.5) => bass.pluckPos;
-		1 => bass.noteOn;
-		0.55 :: second => now;
-		1 => bass.noteOff;
-		0.05 :: second => now;
-     }
-
+        Math.random2f(0.05,0.5) => bass.pluckPos;
+        1 => bass.noteOn;
+        0.55 :: second => now;
+        1 => bass.noteOff;
+        0.05 :: second => now;
+    }
+    
     alberto + 1 => alberto;
-
-	// uncomment next line for song entirety
-//    if( alberto > 33) 
+    
+    // uncomment next line for song entirety
+    //    if( alberto > 33) 
     // uncomment next line for one song phrase length
-//    if( alberto > 5) 
+    //    if( alberto > 5) 
     if( alberto > 9) // first song phrase repeated
     {
-		<<< "Last now (at second):", now / second >>>;
-		// close file
-		// COMMENT next 2 lines if all song samples wanted
-		fout.close();
-		me.exit();
-		// and UNcomment below...
-	}
-	
-
+        <<< "Last now (at second):", now / second >>>;
+        // close file
+        // COMMENT next 2 lines if all song samples wanted
+        fout.close();
+        me.exit();
+        // and UNcomment below...
+    }
+    
+    
     // uncomment next line for full training and comment next
-//	if( alberto > 33) // song entirety
-	if( alberto > 9) // 1st phrase of song, repeated 		
-	{
-		<<< "Last now (at second):", now / second >>>;
-		// close file
-		// UNcomment next 2 lines if all song samples wanted
-		//fout.close();
-		//me.exit();
-		
-		// AND COMMENT SAME LINES IN PREVIOUS if clause
-	}
-
-}
-
-
+    //	if( alberto > 33) // song entirety
+        if( alberto > 9) // 1st phrase of song, repeated 		
+        {
+            <<< "Last now (at second):", now / second >>>;
+            // close file
+            // UNcomment next 2 lines if all song samples wanted
+            //fout.close();
+            //me.exit();
+            
+            // AND COMMENT SAME LINES IN PREVIOUS if clause
+        }
+        
+    }
+    
