@@ -29,6 +29,6 @@ Joystick mouse trails in Cerebral Palsy User
 ## III.- `SELECTED DATA FILES observations`
 
 
-   * `out2221nnn.txt -- o` When..
+   * `out2221nnn.txt -- ` XXXX..
          
-   * `out2221nnn.txt MAP & TRAILS` 
+   * `out2221nnn.txt MAP & TRAILS` XXXX..
