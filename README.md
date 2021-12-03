@@ -13,6 +13,9 @@ Joystick mouse trails in Cerebral Palsy User
    * `Dasher's sources -- ` 
 [dasher: a keyboardless text entry software](https://github.com/dasher-project/dasher/releases) (...explore usage in the wiki section)
 
+   * `my yet untouched Up2Date Dasher's fork -- ` 
+[Dasher Version 5](https://github.com/dasher-project/dasher) (while I have been able to build from zipped/cloned files from the above link in Ubuntu 18, 20 systems and Windows 10 systems, I have not touched nor cloned this fork yet)
+
     
      
 ## I.- `Generating and exploring the data...`
