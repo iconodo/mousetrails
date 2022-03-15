@@ -1,9 +1,19 @@
 # mousetrails
 Joystick mouse trails in Cerebral Palsy User
 
+### WARNING. On point I.- generating... chuck/miniAudicle scripts that write the mouse events and trails ONLY run on MACs OS versions supporting 32 bits software (we did it under Catalina and High Sierra versions). RStudio scripts that characterise the data generated are better represented in following RPubs documents:
+
+   * `Spanish version -- ` 
+[Rastros de Ratón...](https://rpubs.com/iconodo/865240)
+    
+                   
+   * `English version -- ` 
+[Joystick mouse...](https://rpubs.com/iconodo/864514)
+
+
 ### Stairs towards:
 
-## `Inferencing of a spasms dictionary from...`
+## `Inferencing of a spasms filtering from...`
 
    * `Folder chuckedData text files -- ` 
 [in this repository](https://github.com/iconodo/mousetrails/blob/master/chuckedData)
